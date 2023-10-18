@@ -33,7 +33,8 @@ public class ScreenNavigation {
 	@FindBy(xpath = "(//div[@class='buttonControls--container']/div)[1]")
 	WebElement AddToWatchlistButton;
 	
-	@FindBy(xpath = "(//div[@class='buttonControls--container']/div //button[@aria-label='Remove from My List'])[1]")
+	//div[@class='buttonControls--container']/div //button[@aria-label='Remove from My List'])[1]
+	@FindBy(xpath = "(//div[@class='buttonControls--container']/div)[1]")
 	WebElement RemoveFromWatchlistButton;
 	
 	@FindBy(xpath="//div[@class='ltr-1rjg9xf'] //div[@class='boxart-size-16x9 boxart-container boxart-rounded']")
@@ -115,7 +116,7 @@ public class ScreenNavigation {
 //						System.out.println("Content Removed Successfully");
 //					}
 //				}
-				//Thread.sleep(2000);
+				Thread.sleep(2000);
 				RemoveFromWatchlistButton.click();
 				System.out.println("Content Removed Successfully");
 				break;

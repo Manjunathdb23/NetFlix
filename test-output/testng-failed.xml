@@ -5,8 +5,8 @@
     <classes>
       <class name="classes.loginFlow">
         <methods>
-          <include name="profileLaunch"/>
           <include name="validLogin"/>
+          <include name="profileLaunch"/>
         </methods>
       </class> <!-- classes.loginFlow -->
       <class name="classes.ContentSelection">
