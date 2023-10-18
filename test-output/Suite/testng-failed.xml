@@ -3,18 +3,18 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="classes.ContentSelection">
-        <methods>
-          <include name="contentSelection"/>
-          <include name="contentrail"/>
-        </methods>
-      </class> <!-- classes.ContentSelection -->
       <class name="classes.loginFlow">
         <methods>
           <include name="profileLaunch"/>
           <include name="validLogin"/>
         </methods>
       </class> <!-- classes.loginFlow -->
+      <class name="classes.ContentSelection">
+        <methods>
+          <include name="contentSelection"/>
+          <include name="contentrail"/>
+        </methods>
+      </class> <!-- classes.ContentSelection -->
       <class name="classes.AppScreen">
         <methods>
           <include name="moviesTabLaunch"/>

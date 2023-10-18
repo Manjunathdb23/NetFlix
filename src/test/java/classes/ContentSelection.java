@@ -7,7 +7,7 @@ import pages.driverClass;
 public class ContentSelection extends driverClass {
 	
 	@Test(dependsOnMethods = "generPick")
-	public void contentrail()
+	public void contentrail() throws InterruptedException
 	{
 		
 		sn.selectitem();

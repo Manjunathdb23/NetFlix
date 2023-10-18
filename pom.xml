@@ -20,11 +20,40 @@
     <scope>test</scope>
 </dependency>
 
-  	<dependency>
-  		<groupId>Selenium_Practice</groupId>
-  		<artifactId>Maven_Project</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
   </dependencies>
+  
+  <repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <releases><enabled>true</enabled></releases>
+        <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+</repositories>
+
+
+  
+  <!-- similarly whenever you have multiple XML file we can create a separate profiles-->
+  <profiles>
+	  <profile>
+		  <id>Watchlist_Flow</id>
+		  <build>
+			  <pluginManagement>
+		<plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+    </plugins>
+			  </pluginManagement>
+		  </build>
+	  </profile>
+  </profiles>
   
 </project>

@@ -30,7 +30,7 @@ public class ScreenNavigation {
 	@FindBy(xpath= "(//div[@class='previewModal--metadatAndControls-container'] //button[@class='color-supplementary hasIcon round ltr-11vo9g5'])[3]")
 	WebElement expandButton;
 	
-	@FindBy(xpath = "(//div[@class='buttonControls--container']/div //button[@aria-label='Add To My List'])[1]")
+	@FindBy(xpath = "(//div[@class='buttonControls--container']/div)[1]")
 	WebElement AddToWatchlistButton;
 	
 	@FindBy(xpath = "(//div[@class='buttonControls--container']/div //button[@aria-label='Remove from My List'])[1]")
@@ -69,7 +69,8 @@ public class ScreenNavigation {
 		}
 	}
 	
-	public void selectitem() {
+	public void selectitem() throws InterruptedException {
+		Thread.sleep(3000);
 		List<WebElement> railname = driver.findElements(By.xpath("//div[@class='row-header-title']"));
 		System.out.println(railname.size());
 		for(WebElement ele : railname) {
